@@ -1,4 +1,4 @@
-# cocoon_simple_form_demo
+# Sample RKNET Project Manager - cocoon
 
 [cocoon](http://github.com/nathanvda/cocoon) is a Rails3 gem to allow easier handling of nested forms.
 
@@ -8,6 +8,8 @@ and [simple_form](https://github.com/plataformatec/simple_form).
 Cocoon itself is formbuilder-agnostic, so it works with standard Rails form-builder, Formtastic or simple_form.
 
 ![tag url](http://i.imgur.com/CYhEqDH.png)
+
+![tag url](http://i.imgur.com/waFLpQI.png)
 
 ## Notes
 
