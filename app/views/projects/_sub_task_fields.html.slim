@@ -1,7 +1,9 @@
 .nested-fields
   .form-inline
-    b SubTask
-    = f.input :name, placeholder: 'name the subtask', label: false
-    = f.input :description, placeholder: 'add a description', label: false
-    = link_to_remove_association f, class: 'btn btn-default btn-xs' do
+    b Sub-Tarefa: &nbsp;
+    = f.input :name, placeholder: 'Nome da Sub-Tarefa', label: false
+    |&nbsp; 
+    = f.input :description, placeholder: 'Inclua uma descrição', label: false
+    |&nbsp; 
+    = link_to_remove_association f, class: 'btn btn-danger btn-xs' do
       .glyphicon.glyphicon-remove

@@ -1,12 +1,13 @@
 .nested-fields.well.well-compact
   .form-inline
-    = f.input :name, :label => false, :placeholder => 'name the task', class: 'form-control'
-    = f.input :description, :label => false, :placeholder => 'add a description', class: 'form-control'
+    = f.input :name, :label => false, :placeholder => 'Nome da Tarefa', class: 'form-control'
+    | &nbsp;
+    = f.input :description, :label => false, :placeholder => 'Descrição', class: 'form-control'
     = f.input :done, :as => :boolean
-    = link_to_remove_association f, data: {:confirm => 'do you really want to do this?'}, class: 'btn btn-default btn-xs' do
+    = link_to_remove_association f, data: {:confirm => 'Deseja realmente excluir esta Tarefa??'}, class: 'btn btn-default btn-xs' do
       .glyphicon.glyphicon-remove
   .sub_tasks
     = f.simple_fields_for :sub_tasks do |sub_task|
       = render 'sub_task_fields', :f => sub_task
     .links
-      = link_to_add_association 'add sub-task', f, :sub_tasks
+      = link_to_add_association 'Nova Sub-Tarefa', f, :sub_tasks

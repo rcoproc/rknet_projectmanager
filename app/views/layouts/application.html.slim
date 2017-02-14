@@ -1,7 +1,7 @@
 doctype 5
 html
   head
-    title= "Cocoon Nested Form Demo (using Simple Form and slim)"
+    title= ".: RKNET - PM :."
     = stylesheet_link_tag 'application'
     = javascript_include_tag "application"
     = csrf_meta_tag
@@ -16,13 +16,13 @@ body style='padding-top:40px;'
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          = link_to "Cocoon Demo", root_path, class: 'navbar-brand'
+          = link_to "RKNET Project Manager", root_path, class: 'navbar-brand'
         .navbar-collapse.collapse
           ul.nav.navbar-nav
             li
               =link_to "Home", root_url
             li
-              =link_to "About", root_url
+              =link_to "Sobre", root_url
     .container
       == render :partial => 'shared/flashes'
       .row
@@ -32,4 +32,4 @@ body style='padding-top:40px;'
 
   footer#footer.row
     .col-md-6
-      p.credit.small.muted Example project for Cocoon © Nathan Van der Auwera 2011-2014
+      p.credit.small.muted Beta Project Manager (c) 2017 

@@ -1,36 +1,41 @@
 
 .alert.alert-warning
   p
-    | A project has a name, and an owner. It has many tasks, and many people as well.
-    | For sake of the example, we assume people only work on one project. While owners can have many projects.
-    | A project can have many tags. You can link an existing tag, or add a new tag and link to that.
+    | Um projeto tem um nome e seu Dono(criador). Ele pode ter várias tarefas, e várias pessoas também.
+    | Neste exemplo, nós assumimos que pessoas poderão trabalhar em um único projeto. Enquanto Donos em varios projetos.
+    | Um projeto pode ter várias TAGS. Vocë pode linkar com uma Tag existente ou adicionar uma nova Tag e ligar ela ao projeto.
     |
 
 table.table
   tr
-    td Name
+    td Projeto
     td
-      =@project.name
+      h2=@project.name
   tr
-    td Owned by
+    td Criado por
     td
-      = (@project.owner ? @project.owner.try(:name) : 'no owner yet')
+      = (@project.owner ? @project.owner.try(:name) : 'Dono ainda não definido')
 
 
-h3 Tasks
+h3 Tarefas
 
 p
-  | List all the tasks here
+  | Relação das tarefas deste Projeto
 
 table.table
   -@project.tasks.each do |task|
     tr
       td= task.name
       td= task.description
-      td= task.done
+      td
+        - if task.done
+          b CONCLUIDO
+        - else
+          span&nbsp;
 
 
-h3 People
+
+h3 Pessoas
 
 table.table
   -@project.people.each do |person|
@@ -39,7 +44,7 @@ table.table
       td= person.role
       td= person.description
 
-h3 Tags
+h3 Tags(marcadores)
 
 table.table
   -@project.tags.each do |tag|
@@ -47,6 +52,6 @@ table.table
       td= tag.name
 
 
-= link_to 'Edit', edit_project_path(@project)
+= link_to 'Alterar', edit_project_path(@project)
 = '|'
-= link_to 'Back', projects_path
+= link_to 'Voltar', projects_path

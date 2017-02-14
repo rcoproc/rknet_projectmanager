@@ -1,3 +1,25 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+// Navbar Colors
+// $navbar-default-color:                     #fff !default;
+$navbar-default-bg:                        #3aa255 !default;
+// $navbar-default-bg:                        #3c8dbc !default;
+
+$navbar-default-link-color:                #fff !default;
+$navbar-default-link-hover-color:          #333 !default;
+$navbar-default-link-hover-bg:             transparent !default;
+$navbar-default-link-active-color:         #fff !default;
+$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-disabled-color:       #ccc !default;
+$navbar-default-link-disabled-bg:          transparent !default;
+
+// Navbar toggle
+$navbar-default-toggle-hover-bg:           #333 !default;
+$navbar-default-toggle-icon-bar-bg:        #fff !default;
+$navbar-default-toggle-border-color:       #ddd !default;
+
+// Typography
+$font-size-base:          16px !default;
+
+
 @import "bootstrap-sprockets";
 @import "bootstrap";

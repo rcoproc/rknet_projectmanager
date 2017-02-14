@@ -1,13 +1,13 @@
 = simple_form_for @project do |f|
-  = f.input :name, :hint => 'The title of your project'
+  = f.input :name, :hint => 'Título do seu projeto.'
 
   ul.nav.nav-tabs role='tablist'
     li.active
-      = link_to 'Tasks (:has_many --nested)', '#tasks', data: {toggle: 'tab'}
+      = link_to 'Tarefas (:has_many --nested)', '#tasks', data: {toggle: 'tab'}
     li
-      = link_to 'People (:has_many)', '#people', data: {toggle: 'tab'}
+      = link_to 'Pessoas (:has_many)', '#people', data: {toggle: 'tab'}
     li
-      = link_to 'Owner (:belongs_to)', '#owner', data: {toggle: 'tab'}
+      = link_to 'Dono (:belongs_to)', '#owner', data: {toggle: 'tab'}
     li
       = link_to 'Tags (:has_many :through)', '#tags', data: {toggle: 'tab'}
 
@@ -15,24 +15,37 @@
     #tasks.tab-pane.active role='tabpanel'
       = f.simple_fields_for :tasks do |task|
         = render 'task_fields', :f => task
-      .links
-        = link_to_add_association 'add task', f, :tasks
+      .row
+        .col-lg-3
+          = link_to_add_association 'Nova Tarefa', f, :tasks, class: 'btn btn-success'
+        .col-lg-6
+        .col-lg-3
 
     #people.tab-pane role='tabpanel'
       = f.simple_fields_for :people do |person|
         = render 'person_fields', :f => person
-      .links
-        = link_to_add_association 'add person', f, :people
+      .row
+        .col-lg-3
+        .col-lg-6
+          .links
+            = link_to_add_association 'Nova Pessoa', f, :people
+        .col-lg-3
 
     #owner.tab-pane role='tabpanel'
       #owner_from_list
-        = f.association :owner, collection: Person.order(:name), prompt: 'Choose an existing owner'
-      = link_to_add_association 'add a new person as owner', f, :owner
+        = f.association :owner, collection: Person.order(:name), prompt: 'Escolha um novo Dono.'
+      = link_to_add_association 'Novo Dono', f, :owner
 
     #tags.tab-pane role='tabpanel'
       = f.simple_fields_for :project_tags do |project_tag|
         = render 'project_tag_fields', :f => project_tag
-      = link_to_add_association 'add a tag', f, :project_tags
+      = link_to_add_association 'Nova TAG', f, :project_tags
 
   .actions
-    = f.button :submit, :disable_with => 'Please wait ...'
+    .row
+      col-lg-12
+      br
+    .row
+      .col-lg-12
+        .text-center
+          = f.button :submit, 'Gravar', :disable_with => 'Por favor Aguarde ...'

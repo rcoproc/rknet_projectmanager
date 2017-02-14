@@ -60,7 +60,7 @@ class ProjectsController < ApplicationController
 
     respond_to do |format|
       if @project.update_attributes(project_params)
-        format.html { redirect_to(@project, :notice => 'Project was successfully updated.') }
+        format.html { redirect_to(@project, :notice => 'Projeto foi atualizado com sucesso!') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -86,10 +86,12 @@ class ProjectsController < ApplicationController
   def project_params
     params.require(:project).permit(
         :name, :description, :owner_id,
-        tasks_attributes: [:id, :_destroy, :name, :description, sub_tasks_attributes: [:id, :_destroy, :name, :description] ],
+        tasks_attributes: [:id, :_destroy, :name, :description, :done, sub_tasks_attributes: [:id, :_destroy, :name, :description] ],
         people_attributes: [:id, :name, :role, :description, :_destroy],
         owner_attributes: [:id, :name, :role, :description, :_destroy],
-        project_tags_attributes: [:id, :_destroy, :tag_id, tag_attributes: [:id, :_destroy, :name]]
+        project_tags_attributes: [:id, :_destroy, :tag_id,
+        tag_attributes: [:id, :_destroy, :name]]
+
     )
   end
 end

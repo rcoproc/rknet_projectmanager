@@ -32,4 +32,5 @@ the tag is not deleted, only the link.
 
 ## Copyright
 
+Copyright (c) 2017 Ricardo Cesar de Oliveira. See LICENSE for details.
 Copyright (c) 2011 Nathan Van der Auwera. See LICENSE for details.
