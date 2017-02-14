@@ -7,6 +7,7 @@ and [simple_form](https://github.com/plataformatec/simple_form).
 
 Cocoon itself is formbuilder-agnostic, so it works with standard Rails form-builder, Formtastic or simple_form.
 
+![tag url](http://i.imgur.com/CYhEqDH.png)
 
 ## Notes
 
