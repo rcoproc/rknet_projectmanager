@@ -27,3 +27,5 @@ CocoonSimpleFormDemo::Application.configure do
 
   config.eager_load=false
 end
+
+Slim::Engine.set_options pretty: false

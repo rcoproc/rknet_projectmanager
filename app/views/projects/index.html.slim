@@ -1,18 +1,43 @@
-h1 Relação de Projetos
+h3 
+  = icon('list', class: 'text-success')
+  |&nbsp;
+   Relação de Projetos
 
-table.table
-  thead
-    tr
-      th Projeto
-      th Ações
-  tbody
-    - @projects.each do |project|
-      tr
-        td= project.name
-        td
-          = link_to 'Visualizar', project, class: 'btn btn-default btn-xs'
-          = link_to 'Alterar', edit_project_path(project), class: 'btn btn-info btn-xs'
-          = link_to 'Excluir', project, :confirm => 'Tem certeza?', :method => :delete, class: 'btn btn-xs btn-danger'
+p
+
+- render 'grid'
+
+.row
+  .col-md-12
+    .well
+      .row
+        .col-md-1
+          h5 Projeto
+        .col-md-4
+          = grid_filter @projects, :project_filter
+      .row
+        .col-md-2
+          .col-md-2.col-xs-12 *{ style: 'margin: 2px' }
+          = link_to new_project_path, class: 'btn btn-success col-xs-12' do
+            = icon('plus')
+            | &nbsp;
+              Novo Projeto
+        .col-md-2.col-xs-6 *{ style: 'margin: 2px 0px' }
+          button.btn.btn-default.col-xs-12.wg-external-submit-button *{ 'data-grid-name' => 'grid' }
+            = icon('filter')
+            | &nbsp;
+              Filtrar
+        .col-md-2.col-xs-6 *{ style: 'margin: 2px 0px' }
+          button.btn.btn-info.col-xs-12.wg-external-reset-button *{ 'data-grid-name' => 'grid' }
+            = icon( 'refresh')
+            | &nbsp;
+             Limpar
+        .col-md-2.col-xs-12 *{ style: 'margin: 2px 2px 2px 2px' }
+          button.btn.btn-primary.col-xs-12.wg-external-csv-export-button *{ 'data-grid-name' => 'grid' }
+            | Exportar CSV
+
+p
+
+== render_grid(@projects)
 
 
-= link_to 'Novo Projeto', new_project_path, class:  'btn btn-success btn-lg'
