@@ -2,12 +2,19 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.xml
   def index
-    @projects = Project.all
+    @projects = initialize_grid(Project, 
+                               order: 'name',
+                               enable_export_to_csv: true,
+                               csv_field_separator: ';',
+                               csv_file_name: 'projetos',
+                               per_page: 10)
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @projects }
-    end
+    export_grid_if_requested('grid' => 'grid')
+
+    # respond_to do |format|
+    #   format.html # index.html.erb
+    #   format.xml  { render :xml => @projects }
+    # end
   end
 
   # GET /projects/1

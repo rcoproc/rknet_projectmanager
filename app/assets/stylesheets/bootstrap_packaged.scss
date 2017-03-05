@@ -20,6 +20,18 @@ $navbar-default-toggle-border-color:       #ddd !default;
 // Typography
 $font-size-base:          16px !default;
 
+// Pagination
+$pagination-active-bg:                 $navbar-default-bg !default;
+$pagination-active-border:             $navbar-default-bg !default;
+
+//** Global textual link color.
+$link-color:            $navbar-default-bg !default;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+body {
+  background-color: #eee;
+}
+

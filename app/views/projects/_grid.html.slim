@@ -1,0 +1,12 @@
+= define_grid(@projects, hide_submit_button: false, hide_reset_button: false, show_filters: :allways, allow_showing_all_records: false, upper_pagination_panel: true, html: { class: 'table table-striped table-hover table-condensed'}) do |g|
+
+  - g.column in_csv: false, :html => { style: 'text-align: center' } do |project|
+    - link_to 'Alterar', edit_project_path(project), class: 'btn btn-info btn-xs'
+
+  - g.column name: 'Projeto', attribute: 'name', detach_with_id: :project_filter
+
+  - g.column in_csv: false, :html => { :style => 'text-align: center' } do |project|
+    - link_to 'Visualizar', project, class: 'btn btn-default btn-xs'
+
+  - g.column in_csv: false, :html => { :style => 'text-align: center' } do |project|
+    - link_to 'Excluir', project, :method => :delete, :data => { :confirm => 'Tem certeza?' }, class: 'btn btn-xs btn-danger'

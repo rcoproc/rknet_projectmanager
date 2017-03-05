@@ -21,6 +21,8 @@ gem 'simple_form', '~> 3.1.0'
 gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.3.0'
 
+gem 'wice_grid'
+gem 'font-awesome-sass', '~> 4.3'
 # Use unicorn as the web server
 # gem 'unicorn'
 
