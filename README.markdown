@@ -5,9 +5,14 @@
 This is a small demo that shows cocoon in action together with [slim](https://github.com/stonean/slim)
 and [simple_form](https://github.com/plataformatec/simple_form).
 
+- [x] 05/03/2017 - List of Projects with GEM wice_grid(with export to CSV an dinamic filters);
+
 Cocoon itself is formbuilder-agnostic, so it works with standard Rails form-builder, Formtastic or simple_form.
 
 ![tag url](http://i.imgur.com/CYhEqDH.png)
+
+Responsive Size and RKNET Composer Project
+![ tag url])(http://i.imgur.com/cCB5TJ5.png)
 
 ![tag url](http://i.imgur.com/waFLpQI.png)
 
