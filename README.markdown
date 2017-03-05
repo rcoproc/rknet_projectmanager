@@ -12,7 +12,7 @@ Cocoon itself is formbuilder-agnostic, so it works with standard Rails form-buil
 ![tag url](http://i.imgur.com/CYhEqDH.png)
 
 Responsive Size and RKNET Composer Project
-![ tag url])(http://i.imgur.com/cCB5TJ5.png)
+![tag url])(http://i.imgur.com/cCB5TJ5.png)
 
 ![tag url](http://i.imgur.com/waFLpQI.png)
 
