@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+
   # GET /projects
   # GET /projects.xml
   def index
@@ -15,6 +16,10 @@ class ProjectsController < ApplicationController
     #   format.html # index.html.erb
     #   format.xml  { render :xml => @projects }
     # end
+  end
+
+  def report
+    respond_to_report('projects', 'select * from projects order by name', 'projects.pdf')
   end
 
   # GET /projects/1

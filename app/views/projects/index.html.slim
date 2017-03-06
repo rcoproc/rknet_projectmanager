@@ -15,6 +15,7 @@ p
           h5 Projeto
         .col-md-4
           = grid_filter @projects, :project_filter
+
       .row
         .col-md-2
           .col-md-2.col-xs-12 *{ style: 'margin: 2px' }
@@ -22,19 +23,28 @@ p
             = icon('plus')
             | &nbsp;
               Novo Projeto
+
         .col-md-2.col-xs-6 *{ style: 'margin: 2px 0px' }
           button.btn.btn-default.col-xs-12.wg-external-submit-button *{ 'data-grid-name' => 'grid' }
             = icon('filter')
             | &nbsp;
               Filtrar
+
         .col-md-2.col-xs-6 *{ style: 'margin: 2px 0px' }
           button.btn.btn-info.col-xs-12.wg-external-reset-button *{ 'data-grid-name' => 'grid' }
             = icon( 'refresh')
             | &nbsp;
-             Limpar
+              Limpar
+
         .col-md-2.col-xs-12 *{ style: 'margin: 2px 2px 2px 2px' }
           button.btn.btn-primary.col-xs-12.wg-external-csv-export-button *{ 'data-grid-name' => 'grid' }
             | Exportar CSV
+
+        .col-md-2.col-xs-12 *{ style: 'margin: 2px 0px' }
+          = link_to report_projects_path, class: 'btn btn-primary col-xs-12' do
+            = icon( 'print')
+            | &nbsp;
+              Imprimir
 
 p
 

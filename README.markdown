@@ -5,6 +5,7 @@
 This is a small demo that shows cocoon in action together with [slim](https://github.com/stonean/slim)
 and [simple_form](https://github.com/plataformatec/simple_form).
 
+- [x] 06/03/2017 - Change to Jruby and Jasper Report initial with projects.jasper;
 - [x] 05/03/2017 - List of Projects with GEM wice_grid(with export to CSV an dinamic filters);
 
 Cocoon itself is formbuilder-agnostic, so it works with standard Rails form-builder, Formtastic or simple_form.
