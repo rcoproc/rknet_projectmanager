@@ -1,4 +1,4 @@
-# Sample RKNET Project Manager - cocoon
+# Sample RKNET Project Manager - Cocoon and JRuby/Jasper
 
 [cocoon](http://github.com/nathanvda/cocoon) is a Rails3 gem to allow easier handling of nested forms.
 
