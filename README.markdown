@@ -15,6 +15,9 @@ Cocoon itself is formbuilder-agnostic, so it works with standard Rails form-buil
 Responsive Size and RKNET Composer Project
 ![tag url](http://i.imgur.com/cCB5TJ5.png)
 
+Reports with JasperReport
+![tag_url](http://i.imgur.com/LfG5lMx.png)
+
 ![tag url](http://i.imgur.com/waFLpQI.png)
 
 ## Notes
