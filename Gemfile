@@ -2,14 +2,16 @@ source 'http://rubygems.org'
 
 gem 'rails', '4.2.1'
 
-gem 'therubyracer'
+# gem 'therubyracer'
+# gem 'rhino'
 
 # Asset template engines
 gem 'sass-rails'
 gem 'coffee-script'
 gem 'uglifier'
 
-gem 'sqlite3-ruby', :require => 'sqlite3'
+# gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'activerecord-jdbcsqlite3-adapter', platform: :jruby
 
 # gem 'cocoon', :path => '../cocoon'
 # gem 'cocoon', :git => 'https://github.com/nathanvda/cocoon'
@@ -25,6 +27,11 @@ gem 'wice_grid'
 gem 'font-awesome-sass', '~> 4.3'
 # Use unicorn as the web server
 # gem 'unicorn'
+
+#gem "responders"
+
+gem 'warbler'
+gem 'puma'
 
 # Deploy with Capistrano
 # gem 'capistrano'
@@ -42,9 +49,11 @@ gem 'font-awesome-sass', '~> 4.3'
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
-# group :development, :test do
-#   gem 'webrat'
-# end
+group :development, :test do
+   #gem 'binding_of_callers'
+   gem 'better_errors'
+   gem 'pry'
+end
 gem "rspec-rails", ">= 2.0.1", :group => [:development, :test]
 gem "slim"
 gem "slim-rails", :require => false
