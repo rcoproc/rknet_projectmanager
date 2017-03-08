@@ -16,9 +16,9 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  user: ENV['RCO_USER']
-  password: ENV['RCO_PASSWORD']
+  adaptadapter: postgresql
+  jndi: jdbc/PostgreDS
+  database: ENV['RCO_DB'] 
+  url: ENV['DATABASE_URL']
   pool: 5
   timeout: 5000
