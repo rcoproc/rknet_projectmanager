@@ -18,5 +18,7 @@ test:
 production:
   adapter: sqlite3
   database: db/production.sqlite3
+  user: ENV['RCO_USER']
+  password: ENV['RCO_PASSWORD']
   pool: 5
   timeout: 5000
