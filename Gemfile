@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+ruby "2.2.3", :engine => "jruby", :engine_version => "9.0.5.0"
 gem 'rails', '4.2.1'
 
 # gem 'therubyracer'
@@ -12,7 +13,7 @@ gem 'uglifier'
 
 # gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'activerecord-jdbcpostgresql-adapter', platform: :jruby
-gem 'activerecord-jdbcpostgresql-adapter'
+gem 'activerecord-jdbcpostgresql-adapter', platform: :jruby
 
 # gem 'cocoon', :path => '../cocoon'
 # gem 'cocoon', :git => 'https://github.com/nathanvda/cocoon'
