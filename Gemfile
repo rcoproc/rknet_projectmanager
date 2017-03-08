@@ -13,6 +13,7 @@ gem 'uglifier'
 # gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'activerecord-jdbcsqlite3-adapter', platform: :jruby
 gem 'activerecord-jdbcpostgresql-adapter', platform: :jruby
+gem 'pg'
 
 # gem 'cocoon', :path => '../cocoon'
 # gem 'cocoon', :git => 'https://github.com/nathanvda/cocoon'
