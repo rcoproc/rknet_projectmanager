@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+ruby "2.2.3", :engine => "jruby", :engine_version => "9.0.5.0"
 gem 'rails', '4.2.1'
 
 # gem 'therubyracer'
@@ -39,6 +40,8 @@ gem 'puma'
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'
 # gem 'ruby-debug19'
+
+gem 'rails_12factor', group: :production
 
 # Bundle the extra gems:
 # gem 'bj'
