@@ -16,7 +16,7 @@ test:
   timeout: 5000
 
 production:
-  adaptadapter: postgresql
+  adapter: postgresql
   jndi: jdbc/PostgreDS
   database: <%= ENV['RCO_DB']  %>
   url: <%= ENV['DATABASE_URL'] %>
