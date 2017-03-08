@@ -24,6 +24,7 @@ production:
   jndi: jdbc/PostgreDS
   database: <%= ENV['RCO_DB']  %>
   url: <%= ENV['DATABASE_URL'] %>
+  jndi: jdbc/PostgreDS
   pool: 20
   port: 5432
   timeout: 5000
