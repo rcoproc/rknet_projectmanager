@@ -20,8 +20,8 @@ test:
   timeout: 5000
 
 production:
-  adapter: postgresql
-  jndi: jdbc/PostgreDS
+  adapter: jdbcpostgresql
+  encoding: unicode
   url: <%= ENV['RCO_URL'] %>
   pool: 20
   port: 5432
