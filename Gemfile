@@ -25,6 +25,7 @@ gem 'bootstrap-sass', '~> 3.3.0'
 gem 'wice_grid'
 gem 'font-awesome-sass', '~> 4.3'
 
+gem 'rails_12factor', group: :production
 gem 'warbler'
 gem 'puma'
 
