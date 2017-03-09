@@ -2,11 +2,11 @@
 #   gem install sqlite3-ruby (not necessary on OS X Leopard)
 development:
   adapter: postgresql
-  username: macbook
+  host: localhost
+  username: <%= ENV['USER'] %>
   database: pm_dev
   pool: 20
   port: 5432
-  host: localhost
   timeout: 5000
 
 # Warning: The database defined as "test" will be erased and
