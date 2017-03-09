@@ -1,10 +1,13 @@
 # Sample RKNET Project Manager - Cocoon and JRuby/Jasper
 
+Heroku: (http://www.pm.rknet.top)
 [cocoon](http://github.com/nathanvda/cocoon) is a Rails3 gem to allow easier handling of nested forms.
 
 This is a small demo that shows cocoon in action together with [slim](https://github.com/stonean/slim)
 and [simple_form](https://github.com/plataformatec/simple_form).
 
+- [ ] Resolver problema Relatório no Heroku online;
+- [x] 09/03/2017 - Deploy to Heroku;
 - [x] 06/03/2017 - Change to Jruby and Jasper Report initial with projects.jasper;
 - [x] 05/03/2017 - List of Projects with GEM wice_grid(with export to CSV an dinamic filters);
 
