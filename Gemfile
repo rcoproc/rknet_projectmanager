@@ -42,6 +42,8 @@ gem 'puma'
 # gem 'ruby-debug'
 # gem 'ruby-debug19'
 
+gem 'rails_12factor', group: :production
+
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'
